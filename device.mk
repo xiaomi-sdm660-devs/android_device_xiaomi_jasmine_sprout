@@ -24,9 +24,6 @@
 # Inherit from wayne-common
 $(call inherit-product, device/xiaomi/wayne-common/wayne.mk)
 
-# Inherit proprietary files
-$(call inherit-product-if-exists, vendor/xiaomi/jasmine_sprout/jasmine_sprout-vendor.mk)
-
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
@@ -77,3 +74,6 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/bootdevice/by-name/system
 PRODUCT_VENDOR_VERITY_PARTITION := /dev/block/bootdevice/by-name/vendor
 $(call inherit-product, build/target/product/verity.mk)
+
+# Inherit the proprietary files
+$(call inherit-product, vendor/xiaomi/jasmine_sprout/jasmine_sprout-vendor.mk)

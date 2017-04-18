@@ -23,7 +23,7 @@
 #
 
 # Inherit from wayne-common
--include device/xiaomi/wayne-common/BoardConfigCommon.mk
+include device/xiaomi/wayne-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/xiaomi/jasmine_sprout
 
@@ -42,4 +42,4 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 VENDOR_SECURITY_PATCH := 2018-11-01
 
 # Inherit the proprietary files
--include vendor/xiaomi/jasmine_sprout/BoardConfigVendor.mk
+include vendor/xiaomi/jasmine_sprout/BoardConfigVendor.mk
