@@ -27,6 +27,10 @@ $(call inherit-product, device/xiaomi/wayne-common/wayne.mk)
 # Inherit proprietary files
 $(call inherit-product-if-exists, vendor/xiaomi/jasmine_sprout/jasmine_sprout-vendor.mk)
 
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH)
+
 # A/B
 AB_OTA_UPDATER := true
 
