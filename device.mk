@@ -26,3 +26,7 @@ $(call inherit-product, device/xiaomi/wayne-common/wayne.mk)
 
 # Inherit proprietary files
 $(call inherit-product-if-exists, vendor/xiaomi/wayne/wayne-vendor.mk)
+
+# Init
+PRODUCT_PACKAGES += \
+    fstab.qcom
